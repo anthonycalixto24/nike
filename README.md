@@ -1,32 +1,52 @@
-# NIKE — demo storefront
+# NIKE — Bootstrap landing page template
 
-A small e-commerce storefront built with plain **HTML, CSS, Bootstrap 5 and vanilla
-JavaScript**. No build step, no framework, no server-side code.
+A responsive, reusable landing page template built with plain **HTML, CSS, Bootstrap 5
+and vanilla JavaScript**. No build step, no framework, no server-side code.
+
+Palette: black, white and vivid orange (`--ink`, `--paper`, `--orange` in
+`assets/css/styles.css`).
+
+## Bootstrap components used
+
+| Component    | Where                                                              |
+| ------------ | ------------------------------------------------------------------ |
+| **Navbar**   | Sticky dark navbar with a collapsible menu on mobile                |
+| **Carousel** | Three-slide hero with indicators, prev/next controls and autoplay   |
+| **Cards**    | `Featured styles` grid — Bootstrap `.card` markup with vector art   |
+| **Collapse** | FAQ section — independent collapsible panels                        |
+| Offcanvas    | Slide-out shopping bag (bonus, used by the store pages)             |
 
 ## Pages
 
-| File           | What it does                                                              |
-| -------------- | ------------------------------------------------------------------------- |
-| `index.html`   | Hero, featured products, category tiles, members section                   |
-| `shop.html`    | Full catalogue with category filters, search and sorting                   |
-| `product.html` | Product detail (`?id=<product-id>`), size picker, quantity, add to bag     |
+| File           | What it does                                                          |
+| -------------- | --------------------------------------------------------------------- |
+| `index.html`   | The template: carousel, cards, banner and FAQ collapse                 |
+| `shop.html`    | Full catalogue with category filters, search and sorting               |
+| `product.html` | Product detail (`?id=<product-id>`), size picker, quantity, add to bag |
 
 ## Structure
 
 ```
 assets/
-  css/styles.css      custom design layer on top of Bootstrap
+  css/styles.css      design tokens + custom layer on top of Bootstrap
   js/art.js           inline vector sneaker artwork, driven by colourways
   js/data.js          product catalogue (prices, specs, colourways)
   js/store.js         cart state in localStorage + the shared bag panel
-  js/layout.js        header, bag panel, footer, toast host
-  js/cards.js         product card markup
-  js/home.js          home page composition
+  js/layout.js        navbar, bag panel, footer, toast host
+  js/cards.js         product card markup for the shop grid
+  js/template.js      landing page: carousel art, cards, marquee
   js/shop.js          filter / search / sort
   js/product.js       product detail interactions
   vendor/             Bootstrap 5.3.3 (CSS + bundle), vendored so the site
                       works offline
 ```
+
+## Customising
+
+- **Palette** — edit the CSS variables at the top of `assets/css/styles.css`.
+- **Copy** — everything is static HTML in `index.html`.
+- **Products** — edit `assets/js/data.js`; the cards, carousel art and shop grid
+  all read from it.
 
 ## Running it
 

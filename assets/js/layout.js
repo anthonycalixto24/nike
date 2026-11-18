@@ -1,26 +1,32 @@
 /* Shared chrome: header, bag panel and footer. */
 
-function headerMarkup(active) {
-  const link = (page, label, href) =>
-    `<li class="nav-item"><a class="nav-link ${active === page ? "active" : ""}" href="${href}">${label}</a></li>`;
+const STORE_LINKS = [
+  { label: "Home", href: "index.html", page: "home" },
+  { label: "Shop all", href: "shop.html", page: "shop" },
+  { label: "Running", href: "shop.html?category=Running" },
+  { label: "Basketball", href: "shop.html?category=Basketball" },
+  { label: "Lifestyle", href: "shop.html?category=Lifestyle" },
+];
+
+function headerMarkup({ active, links = STORE_LINKS }) {
+  const items = links
+    .map(
+      ({ label, href, page }) =>
+        `<li class="nav-item"><a class="nav-link ${page && page === active ? "active" : ""}" href="${href}">${label}</a></li>`
+    )
+    .join("");
 
   return `
-  <nav class="navbar navbar-expand-lg bg-white border-bottom">
+  <nav class="navbar navbar-expand-lg navbar-ink" data-bs-theme="dark">
     <div class="container">
       <a class="navbar-brand brand-mark" href="index.html">NIKE</a>
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
         aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav mx-auto gap-lg-4 py-2 py-lg-0">
-          ${link("home", "Home", "index.html")}
-          ${link("shop", "Shop all", "shop.html")}
-          <li class="nav-item"><a class="nav-link" href="shop.html?category=Running">Running</a></li>
-          <li class="nav-item"><a class="nav-link" href="shop.html?category=Basketball">Basketball</a></li>
-          <li class="nav-item"><a class="nav-link" href="shop.html?category=Lifestyle">Lifestyle</a></li>
-        </ul>
-        <button class="btn btn-ink btn-sm cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel">
+        <ul class="navbar-nav mx-auto gap-lg-4 py-2 py-lg-0">${items}</ul>
+        <button class="btn btn-orange btn-sm cart-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel">
           Bag
           <span id="cart-count" class="cart-count is-empty">0</span>
         </button>
@@ -58,7 +64,7 @@ function footerMarkup() {
         <div class="col-lg-4">
           <a class="brand-mark text-white text-decoration-none" href="index.html">NIKE</a>
           <p class="text-white-50 small mt-3 mb-0" style="max-width: 22rem">
-            A demo storefront built with HTML, CSS, Bootstrap and vanilla JavaScript.
+            A landing page template built with HTML, CSS, Bootstrap 5 and vanilla JavaScript.
           </p>
         </div>
         <div class="col-6 col-lg-2">
@@ -73,10 +79,10 @@ function footerMarkup() {
         <div class="col-6 col-lg-2">
           <p class="footer-title">Help</p>
           <ul class="list-unstyled small">
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="shop.html">Shipping</a></li>
             <li><a href="shop.html">Returns</a></li>
             <li><a href="shop.html">Size guide</a></li>
-            <li><a href="shop.html">Contact</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
@@ -84,22 +90,24 @@ function footerMarkup() {
           <p class="text-white-50 small">Early access to drops, and 10% off your first pair.</p>
           <form class="d-flex gap-2" id="newsletter-form">
             <input type="email" class="form-control" placeholder="you@email.com" required aria-label="Email address" />
-            <button class="btn btn-volt" type="submit">Join</button>
+            <button class="btn btn-orange" type="submit">Join</button>
           </form>
         </div>
       </div>
       <div class="d-flex flex-wrap justify-content-between gap-2 border-top border-secondary-subtle mt-4 pt-4">
-        <p class="small text-white-50 mb-0">© ${new Date().getFullYear()} NIKE demo store. Not affiliated with any brand.</p>
+        <p class="small text-white-50 mb-0">© ${new Date().getFullYear()} NIKE demo template. Not affiliated with any brand.</p>
         <p class="small text-white-50 mb-0">Built with Bootstrap 5</p>
       </div>
     </div>
   </footer>`;
 }
 
-function initLayout(active) {
+function initLayout(options = {}) {
+  const config = typeof options === "string" ? { active: options } : options;
+
   const header = document.getElementById("site-header");
   const footer = document.getElementById("site-footer");
-  if (header) header.innerHTML = headerMarkup(active);
+  if (header) header.innerHTML = headerMarkup(config);
   if (footer) footer.innerHTML = footerMarkup();
 
   document.body.insertAdjacentHTML("beforeend", cartMarkup());
