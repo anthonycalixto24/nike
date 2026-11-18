@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NIKE — Built to move</title>
+    <meta name="description" content="A demo sneaker storefront built with HTML, CSS, Bootstrap 5 and vanilla JavaScript." />
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main>
+      <!-- hero -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <p class="eyebrow mb-2">New season · Spring 26</p>
+              <h1 class="h-display mb-3">Built<br />to move</h1>
+              <p class="lead-sm mb-4">
+                Performance footwear for the street, the track and everywhere in between. Eight
+                silhouettes, engineered from the ground up.
+              </p>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <a class="btn btn-ink" href="shop.html">Shop the collection</a>
+                <a class="btn btn-outline-ink" href="shop.html?category=Running">Running shoes</a>
+              </div>
+              <div class="hero-stats">
+                <div><strong>8</strong><span>Silhouettes</span></div>
+                <div><strong>4.7★</strong><span>Avg. rating</span></div>
+                <div><strong>30d</strong><span>Free returns</span></div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="hero-art">
+                <div class="hero-disc"></div>
+                <div class="hero-shoe" id="hero-shoe"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track"></div>
+      </div>
+
+      <!-- featured -->
+      <section class="section">
+        <div class="container">
+          <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+            <div>
+              <p class="eyebrow mb-1">This week</p>
+              <h2 class="h-display h2 mb-0">Featured</h2>
+            </div>
+            <a class="btn btn-outline-ink btn-sm" href="shop.html">View all 8</a>
+          </div>
+          <div class="row g-3 g-lg-4" id="featured-grid"></div>
+        </div>
+      </section>
+
+      <!-- categories -->
+      <section class="section pt-0">
+        <div class="container">
+          <div class="mb-4">
+            <p class="eyebrow mb-1">Find your pair</p>
+            <h2 class="h-display h2 mb-0">Shop by category</h2>
+          </div>
+          <div class="row g-3 g-lg-4" id="category-tiles"></div>
+        </div>
+      </section>
+
+      <!-- members -->
+      <section class="section pt-0">
+        <div class="container">
+          <div class="promo">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                <p class="eyebrow text-white-50 mb-2">Members</p>
+                <h2 class="h-display h2 mb-3">Early access,<br />every drop</h2>
+                <p class="text-white-50 mb-4" style="max-width: 32rem">
+                  Join the list for a first look at new colourways, restocks and members-only
+                  pricing.
+                </p>
+                <a class="btn btn-volt" href="#site-footer">Join the list</a>
+              </div>
+              <div class="col-lg-5">
+                <div class="promo-shoe" id="promo-shoe"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/art.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/cards.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/home.js"></script>
+  </body>
+</html>
