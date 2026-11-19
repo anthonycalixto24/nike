@@ -16,8 +16,9 @@ body {
 
 
 card {
-  color: #000000
-  border-info: 2px solid #17a2b8; /* Info color border */
+  color: #000000;
+  border-color: #17a2b8; /* Info color border */
+  border-width: 1rem; 
   border-radius: 0.25rem; /* Rounded corners */
   padding: 1rem; /* Inner padding */
 }
