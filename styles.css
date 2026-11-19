@@ -1,1 +1,22 @@
+/* 1. Global Reset & Box Sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Page-Wide Dark Theme */
+body {
+  background-color: #000000; /* Pure black background */
+  color: #ffffff;            /* Pure white text */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  padding: 2rem;             /* Outer breathing room around the page edges */
+}
+
+/* 3. Proper Spacing for Divs */
+div {
+  padding: 1.5rem;           /* Space inside the div (between border and text) */
+  margin-bottom: 1.5rem;     /* Space outside the div (separating stacked divs) */
+}
 
