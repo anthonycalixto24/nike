@@ -15,7 +15,7 @@ body {
 }
 
 /* 3. Proper Spacing for Divs */
-div {
+#carouselExampleControls {
   padding: 1.5rem;           /* Space inside the div (between border and text) */
   margin-bottom: 1.5rem;     /* Space outside the div (separating stacked divs) */
 }
