@@ -15,7 +15,7 @@ body {
 }
 
 
-card {
+.card {
   color: #000000;
   border-color: #17a2b8; /* Info color border */
   border-width: 1rem; 
