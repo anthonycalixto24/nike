@@ -49,10 +49,15 @@ body {
   align-items: center;
 }
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
   display: block;
+} */
+
+.carousel-item img {
+  height: auto;
+  object-fit: cover;
 }
 
 .card-img-top {
