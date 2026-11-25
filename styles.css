@@ -18,7 +18,7 @@ body {
 .card {
   color: #000000;
   border-color: #17a2b8; /* Info color border */
-  border-width: 0.5rem; 
+  border-width: 0.1rem; 
   border-radius: 0.5rem; /* Rounded corners */
   padding: 1rem; /* Inner padding */
 }
