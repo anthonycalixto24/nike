@@ -18,7 +18,7 @@ body {
 .card {
   color: #000000;
   border-color: #17a2b8; /* Info color border */
-  border-width: 0.1rem; 
+  border-width: 0.2rem; 
   border-radius: 0.5rem; /* Rounded corners */
   padding: 1rem; /* Inner padding */
 }
@@ -55,7 +55,7 @@ img {
   display: block;
 }
 
-.card-image {
+.card-img-top {
   width: 100%;
   height: 250px;
   object-fit: cover;
