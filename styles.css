@@ -11,7 +11,7 @@ body {
   color: #ffffff;            /* Pure white text */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
-  padding: 2rem;             /* Outer breathing room around the page edges */
+  padding-top: 2rem;             /* Outer breathing room around the page edges */
 }
 
 
@@ -66,7 +66,7 @@ body {
   object-fit: cover;
 }
 
-.navbar {
+nav {
   margin-bottom: 1.5rem;
   border-color: #17a2b8; /* Info color border */
   border-width: 0.2rem; 
