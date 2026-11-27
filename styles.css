@@ -11,7 +11,7 @@ body {
   color: #ffffff;            /* Pure white text */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
-  padding-top: 2rem;             /* Outer breathing room around the page edges */
+  padding-top: 70px;             /* Outer breathing room around the page edges */
 }
 
 
