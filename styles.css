@@ -30,18 +30,6 @@ body {
   margin-bottom: 1.5rem;     /* Space outside the div (separating stacked divs) */
 }
 
-/* .left-container {
-  width: 50%;
-  min-height: 100vh;
-  padding: 20px;
-} */
-
-/* .right-container {
-  width: 50%;
-  min-height: 100vh;
-  margin-left: auto;
-  padding: 20px;
-} */
 
 .center {
   display: flex;
@@ -72,3 +60,4 @@ nav {
   border-width: 0.2rem; 
   border-radius: 0.5rem; /* Rounded corners */
 }
+
