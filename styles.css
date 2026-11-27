@@ -20,6 +20,8 @@ body {
   border-color: #17a2b8; /* Info color border */
   border-width: 0.2rem; 
   border-radius: 0.5rem; /* Rounded corners */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   padding: 1rem; /* Inner padding */
 }
 
